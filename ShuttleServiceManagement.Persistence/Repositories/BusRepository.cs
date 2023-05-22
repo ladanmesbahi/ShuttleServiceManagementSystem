@@ -15,5 +15,11 @@ namespace ShuttleServiceManagement.Persistence.Repositories
         {
             _buses.Add(bus);
         }
+
+        public async Task<Bus> GetById(Guid busId, CancellationToken cancellationToken)
+        {
+            return await _buses
+                .FirstOrDefaultAsync(b => b.Id == busId, cancellationToken);
+        }
     }
 }

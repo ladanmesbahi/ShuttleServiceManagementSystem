@@ -11,6 +11,7 @@ namespace ShuttleServiceManagement.Domain.Errors
         }
         public static class Bus
         {
+            public static readonly Error NotFound = new("Bus.NotFound", "اتوبوس مورد نظر پیدا نشد.");
             public static class Capacity
             {
                 public static readonly Error Required = new("Bus.Capacity.Required", "ورود ظرفیت اتوبوس الزامی است.");
