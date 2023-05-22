@@ -7,12 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
+    <PackageReference Include="Scrutor" Version="4.2.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\ShuttleServiceManagement.Application\ShuttleServiceManagement.Application.csproj" />
+    <ProjectReference Include="..\ShuttleServiceManagement.Domain\ShuttleServiceManagement.Domain.csproj" />
+    <ProjectReference Include="..\ShuttleServiceManagement.Persistence\ShuttleServiceManagement.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
